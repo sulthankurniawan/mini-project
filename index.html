@@ -1,0 +1,226 @@
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+
+        <title>Kalkulator Matematik Segitiga & Jajar Genjang</title>
+    </head>
+    <body>
+        <center>
+            <br>
+            <h1>Welcome to Katik</h1>
+            <p>Hai Sobat, Selamat datang di Katik :]</p>
+            <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+
+            <div class=""><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Segitiga</button></div> 
+            <br>
+            <div class=""><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample2">Jajargenjang</button></div>
+            
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+                            <div class="card card-header">
+                                Luas Segitiga
+                            </div>
+
+                            <center>
+                                <img src="images/rumus_luas_segitiga.png" alt="luas segitiga" width="" height="">
+                            </center>
+
+                            <hr>
+
+                            <center>
+                                <h3>Hitung Luas Segitiga</h3>
+                            </center>
+
+                            <div class="form-group">
+                                <label for="alasSegitiga">Alas</label>
+                                <input type="number" class="form-control" id="alasSegitiga" aria-describedby="" placeholder="0">
+                                <small id="" class="form-text text-muted">dalam cm</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tinggiSegitiga">Tinggi</label>
+                                <input type="number" class="form-control" id="tinggiSegitiga" aria-describedby="" placeholder="0">
+                                <small id="" class="form-text text-muted">dalam cm</small>
+                            </div>
+                            
+                            <hr>
+
+                            <div class="form-group">
+                                <label for="hasilLuasSegitiga">Hasil</label>
+                                <input type="number" class="form-control" id="hasilLuasSegitiga" aria-describedby="" placeholder="0" disabled>
+                                <small id="" class="form-text text-muted">dalam cm persegi</small>
+                            </div>
+
+                            <div class="card card-footer">
+                                <button class="btn btn-warning" onclick="hitungLuasSegitiga()">Hitung</button>
+                                <br>
+                                <button class="btn btn-danger" onclick="resetLuasSegitiga()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+                            <div class="card card-header">
+                                Keliling Segitiga
+                            </div>
+
+                            <center>
+                                <img src="images/rumus_keliling_segitiga.png" alt="keliling segitiga" width="" height="">
+                            </center>
+
+                            <hr>
+
+                            <center>
+                                <h3>Hitung Keliling Segitiga</h3>
+                            </center>
+
+                            <div class="form-group">
+                                <label for="sisiSegitiga1">Sisi 1</label>
+                                <input type="number" class="form-control" id="sisiSegitiga1" aria-describedby="" placeholder="0">
+                                <small id="" class="form-text text-muted">dalam cm</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sisiSegitiga2">Sisi 2</label>
+                                <input type="number" class="form-control" id="sisiSegitiga2" aria-describedby="" placeholder="0">
+                                <small id="" class="form-text text-muted">dalam cm</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sisiSegitiga3">Sisi 3</label>
+                                <input type="number" class="form-control" id="sisiSegitiga3" aria-describedby="" placeholder="0">
+                                <small id="" class="form-text text-muted">dalam cm</small>
+                            </div>
+
+                            <hr>
+
+                            <div class="form-group">
+                                <label for="hasilKelilingSegitiga">Hasil</label>
+                                <input type="number" class="form-control" id="hasilKelilingSegitiga" aria-describedby="" placeholder="0" disabled>
+                                <small id="" class="form-text text-muted">dalam cm persegi</small>
+                            </div>
+
+                            <div class="card card-footer">
+                                <button class="btn btn-warning" onclick="hitungKelilingSegitiga()">Hitung</button>
+                                <br>
+                                <button class="btn btn-danger" onclick="resetKelilingSegitiga()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample3">
+                        <div class="card card-body">
+                            <div class="card card-header">
+                                Luas Jajargenjang
+                            </div>
+
+                            <center>
+                                <img src="images/rumus-luas-jajar-genjang.jpg" alt="luas jajargenjang" width="" height="">
+                            </center>
+
+                            <hr>
+
+                            <center>
+                                <h3>Hitung Luas Jajargenjang</h3>
+                            </center>
+
+                            <div class="form-group">
+                                <label for="alasJajargenjang">Alas</label>
+                                <input type="number" class="form-control" id="alasJajargenjang" aria-describedby="" placeholder="0">
+                                <small id="" class="form-text text-muted">dalam cm</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tinggiJajargenjang">Tinggi</label>
+                                <input type="number" class="form-control" id="tinggiJajargenjang" aria-describedby="" placeholder="0">
+                                <small id="" class="form-text text-muted">dalam cm</small>
+                            </div>
+                            
+                            <hr>
+
+                            <div class="form-group">
+                                <label for="hasilLuasJajargenjang">Hasil</label>
+                                <input type="number" class="form-control" id="hasilLuasJajargenjang" aria-describedby="" placeholder="0" disabled>
+                                <small id="" class="form-text text-muted">dalam cm persegi</small>
+                            </div>
+
+                            <div class="card card-footer">
+                                <button class="btn btn-warning" onclick="hitungLuasJajargenjang()">Hitung</button>
+                                <br>
+                                <button class="btn btn-danger" onclick="resetLuasJajargenjang()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample3">
+                        <div class="card card-body">
+                            <div class="card card-header">
+                                Keliling Jajargenjang
+                            </div>
+
+                            <center>
+                                <img src="images/rumus-keliling-jajar-genjang.jpg" alt="keliling jajargenjang" width="" height="">
+                            </center>
+
+                            <hr>
+
+                            <center>
+                                <h3>Hitung Keliling Jajargenjang</h3>
+                            </center>
+
+                            <div class="form-group">
+                                <label for="panjangJajargenjang">Panjang</label>
+                                <input type="number" class="form-control" id="panjangJajargenjang" aria-describedby="" placeholder="0">
+                                <small id="" class="form-text text-muted">dalam cm</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lebarJajargenjang">Lebar</label>
+                                <input type="number" class="form-control" id="lebarJajargenjang" aria-describedby="" placeholder="0">
+                                <small id="" class="form-text text-muted">dalam cm</small>
+                            </div>
+
+                            <hr>
+
+                            <div class="form-group">
+                                <label for="hasilKelilingJajargenjang">Hasil</label>
+                                <input type="number" class="form-control" id="hasilKelilingJajargenjang" aria-describedby="" placeholder="0" disabled>
+                                <small id="" class="form-text text-muted">dalam cm persegi</small>
+                            </div>
+
+                            <div class="card card-footer">
+                                <button class="btn btn-warning" onclick="hitungKelilingJajargenjang()">Hitung</button>
+                                <br>
+                                <button class="btn btn-danger" onclick="resetKelilingJajargenjang()">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>
